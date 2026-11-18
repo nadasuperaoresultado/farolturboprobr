@@ -3,8 +3,8 @@
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
 @theme inline {
-  --font-sans: "Barlow", sans-serif;
-  --font-display: "Barlow Condensed", sans-serif;
+  --font-sans: "Inter", sans-serif;
+  --font-display: "Montserrat", sans-serif;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -71,6 +71,21 @@
   h2,
   h3 {
     font-family: var(--font-display);
+  }
+  h1 {
+    font-weight: 800;
+  }
+  h2 {
+    font-weight: 700;
+  }
+  h3 {
+    font-weight: 600;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font-family: var(--font-sans);
   }
   button,
   a,
@@ -164,16 +179,16 @@
   background: var(--primary);
 }
 .hero h1 {
-  font-size: 78px;
+  font-size: clamp(44px, 5.5vw, 78px);
   font-weight: 800;
   font-style: italic;
   line-height: 0.95;
   margin-bottom: 22px;
 }
 .hero h2 {
-  font-family: var(--font-sans);
-  font-size: 29px;
-  font-weight: 600;
+  font-family: var(--font-display);
+  font-size: clamp(22px, 2.1vw, 29px);
+  font-weight: 700;
   line-height: 1.24;
   max-width: 555px;
   margin-bottom: 20px;
@@ -406,10 +421,12 @@
     );
   }
   .hero h1 {
-    font-size: 49px;
+    font-size: clamp(40px, 10vw, 49px);
+    line-height: 1;
   }
   .hero h2 {
-    font-size: 25px;
+    font-size: clamp(21px, 5.5vw, 25px);
+    line-height: 1.24;
   }
   .hero-description {
     font-size: 14px;
@@ -481,8 +498,8 @@
 }
 
 .section-title {
-  font-size: clamp(42px, 4vw, 54px);
-  line-height: 1.06;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.08;
   letter-spacing: -0.025em;
 }
 
@@ -726,8 +743,8 @@
   }
 
   .section-title {
-    font-size: 36px;
-    line-height: 1.1;
+    font-size: clamp(32px, 8vw, 36px);
+    line-height: 1.12;
   }
 
   .section-copy {
