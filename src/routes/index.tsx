@@ -309,7 +309,7 @@ function Index() {
               primeiro passo para sair da dúvida.
             </p>
           </div>
-          <div className="space-y-5 border-l border-border pl-7 md:mt-10">
+          <div className="question-panel space-y-5 md:mt-10">
             <p className="mb-7 text-sm font-semibold">Talvez você ainda se pergunte:</p>
             {[
               "Qual serviço aprender primeiro?",
@@ -332,7 +332,7 @@ function Index() {
               className="aspect-[4/3] w-full rounded-md object-cover object-right"
               loading="lazy"
             />
-            <span className="mt-3 block text-[10px] text-muted-foreground">
+            <span className="mt-3 block text-xs text-muted-foreground">
               Imagem ilustrativa. Os resultados variam conforme a peça e a execução.
             </span>
           </div>
@@ -374,7 +374,7 @@ function Index() {
               Conheça as etapas da restauração de faróis, da avaliação inicial aos cuidados finais.
             </p>
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="training-grid mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {modules.map(([n, title, copy]) => (
               <article className="module" key={n}>
                 <div className="flex items-start justify-between">
@@ -410,7 +410,7 @@ function Index() {
       <section className="section section-alt">
         <div className="site-container">
           <div className="eyebrow">Sua preparação</div>
-          <div className="grid gap-10 md:grid-cols-2">
+          <div className="preparation-grid grid gap-10 md:grid-cols-2">
             <h2 className="section-title">
               Antes de oferecer,
               <br />
@@ -422,7 +422,7 @@ function Index() {
                 orientação inicial para entender os itens envolvidos na restauração e organizar sua
                 prática.
               </p>
-              <div className="mt-5 flex items-center gap-3 text-sm">
+              <div className="preparation-note mt-5 flex items-center gap-3 text-sm">
                 <Wrench className="size-5 text-primary" />
                 Orientação digital sobre os materiais, não um kit físico.
               </div>
@@ -438,7 +438,7 @@ function Index() {
             <br />
             <span className="text-primary">sua prática e seu atendimento.</span>
           </h2>
-          <div className="mt-10 grid gap-8 md:grid-cols-[180px_1fr]">
+          <div className="materials-layout mt-10 grid gap-8 md:grid-cols-[180px_1fr]">
             <div className="flex justify-center py-5">
               <div className="digital-art" aria-hidden="true">
                 <CarFront className="size-6 text-primary" />
@@ -447,10 +447,10 @@ function Index() {
                   <br />
                   TURBO <span className="text-primary">PRO</span>
                 </strong>
-                <span className="text-[9px] text-muted-foreground">GUIA DIGITAL</span>
+                <span className="text-xs text-muted-foreground">GUIA DIGITAL</span>
               </div>
             </div>
-            <div className="grid gap-x-10 gap-y-8 sm:grid-cols-2">
+            <div className="material-grid grid gap-x-10 gap-y-8 sm:grid-cols-2">
               {[
                 [
                   FileText,
@@ -475,7 +475,7 @@ function Index() {
               ].map(([Icon, title, text]) => {
                 const MaterialIcon = Icon as typeof FileText;
                 return (
-                  <div key={String(title)} className="border-t border-border pt-5">
+                  <div key={String(title)} className="material-card">
                     <MaterialIcon className="mb-4 size-6 text-primary" />
                     <h3 className="text-xl font-semibold">{String(title)}</h3>
                     <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
@@ -505,7 +505,7 @@ function Index() {
               segmento automotivo.
             </p>
           </div>
-          <div className="space-y-4">
+          <div className="audience-panel space-y-4">
             {[
               "Quem procura uma possibilidade de renda extra.",
               "Quem está começando e quer entender as etapas da restauração.",
