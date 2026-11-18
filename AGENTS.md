@@ -28,3 +28,9 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+<!-- AGENT-MEMORY:BEGIN -->
+- Keep the sales page at the index route and isolate the revenue formula in a tested browser-safe utility so estimates remain consistent.
+- Keep unconfirmed offer terms and testimonials out of public claims; enable checkout only with confirmed prices and purchase links.
+- Store confirmed offer composition in a browser-safe data module with concrete tests so both version lists stay consistent.
+<!-- AGENT-MEMORY:END -->
