@@ -48,22 +48,22 @@ export const Route = createFileRoute("/")({
 const modules = [
   [
     "01",
-    "🧭 Diagnóstico certo",
+    "Diagnóstico certo",
     "Aprenda a avaliar as condições do farol e identificar o procedimento adequado para cada situação.",
   ],
   [
     "02",
-    "🛠️ Técnica de lixamento",
+    "Técnica de lixamento",
     "Conheça o processo de lixamento e sua importância na preparação da superfície para a restauração.",
   ],
   [
     "03",
-    "💨 Vaporização com polímero",
+    "Vaporização com polímero",
     "Aprenda sobre a aplicação do polímero e como ela participa da recuperação da transparência.",
   ],
   [
     "04",
-    "✨ Acabamento profissional",
+    "Acabamento profissional",
     "Conheça os cuidados finais para buscar um resultado visual bem executado.",
   ],
 ];
@@ -103,7 +103,7 @@ function CTA({
   return (
     <Button variant="hero" className={`cta ${className}`} asChild>
       <a href="#versoes">
-        🚀 {children}
+        {children}
         <ArrowRight />
       </a>
     </Button>
@@ -248,7 +248,7 @@ function Index() {
         <div className="hero-shade" />
         <div className="site-container">
           <div className="hero-copy">
-            <div className="eyebrow">🚗 Uma nova habilidade. Novas possibilidades.</div>
+            <div className="eyebrow">Uma nova habilidade. Novas possibilidades.</div>
             <h1>
               FAROL TURBO <span className="text-primary">PRO</span>
             </h1>
@@ -263,7 +263,7 @@ function Index() {
             <CTA className="mt-7" />
             <div className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
               <ShieldCheck className="size-4" />
-              💻 Treinamento e materiais 100% digitais
+              Treinamento e materiais 100% digitais
             </div>
             <p className="mt-2 text-[10px] text-muted-foreground">
               Consulte as condições de acesso de cada versão.
@@ -276,19 +276,19 @@ function Index() {
           <div className="trust-item">
             <CirclePlay />
             <div>
-              🎓 Aprendizado passo a passo<small>Do diagnóstico ao acabamento</small>
+              Aprendizado passo a passo<small>Do diagnóstico ao acabamento</small>
             </div>
           </div>
           <div className="trust-item">
             <Wrench />
             <div>
-              🔧 Uma habilidade prática<small>Para o mercado automotivo</small>
+              Uma habilidade prática<small>Para o mercado automotivo</small>
             </div>
           </div>
           <div className="trust-item">
             <Laptop />
             <div>
-              💻 Conteúdo digital<small>Conheça as versões disponíveis</small>
+              Conteúdo digital<small>Conheça as versões disponíveis</small>
             </div>
           </div>
         </div>
@@ -459,7 +459,7 @@ function Index() {
                 ],
                 [
                   ListChecks,
-                  "✅ Checklist de restauração",
+                  "📋 Checklist de restauração",
                   "12 etapas para ajudar a organizar o procedimento.",
                 ],
                 [
@@ -469,7 +469,7 @@ function Index() {
                 ],
                 [
                   MessageCircle,
-                  "💬 WhatsApp que Vende",
+                  "📲 WhatsApp que Vende",
                   "33 mensagens prontas para apoiar a comunicação com possíveis clientes.",
                 ],
               ].map(([Icon, title, text]) => {
@@ -507,10 +507,10 @@ function Index() {
           </div>
           <div className="audience-panel space-y-4">
             {[
-              "💡 Quem procura uma possibilidade de renda extra.",
-              "🚀 Quem está começando e quer entender as etapas da restauração.",
-              "🚘 Quem já trabalha com estética automotiva e deseja conhecer essa técnica.",
-              "📋 Quem quer aprender a organizar custos e apresentar seus serviços.",
+              "Quem procura uma possibilidade de renda extra.",
+              "Quem está começando e quer entender as etapas da restauração.",
+              "Quem já trabalha com estética automotiva e deseja conhecer essa técnica.",
+              "Quem quer aprender a organizar custos e apresentar seus serviços.",
             ].map((text) => (
               <CheckRow key={text}>{text}</CheckRow>
             ))}
@@ -546,7 +546,7 @@ function Index() {
                 {offers.digital.materials.map((material) => (
                   <CheckRow key={material}>{material}</CheckRow>
                 ))}
-                <CheckRow>📩 Entrega por link do Google Drive</CheckRow>
+                <CheckRow>Entrega por link do Google Drive</CheckRow>
               </div>
               <div className="mt-auto border-t border-border pt-6">
                 <p className="text-lg font-semibold">Oferta em breve</p>
@@ -559,12 +559,12 @@ function Index() {
               </div>
             </article>
             <article className="offer offer-featured flex flex-col">
-              <span className="offer-label">🎥 INCLUI AULAS EM VÍDEO</span>
+              <span className="offer-label">INCLUI AULAS EM VÍDEO</span>
               <CirclePlay className="mb-6 size-8 text-primary" />
               <span className="text-xs font-semibold text-muted-foreground">FAROL TURBO PRO</span>
               <h3 className="mt-2 text-4xl font-bold">COMPLETO</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                🎬 Para quem deseja aprender também com as aulas em vídeo.
+                Para quem deseja aprender também com as aulas em vídeo.
               </p>
               <div className="my-7 space-y-3">
                 {offers.complete.materials.map((material) => (
@@ -583,7 +583,7 @@ function Index() {
             </article>
           </div>
           <p className="mt-7 text-center text-xs text-muted-foreground">
-            💻 100% digital. Nenhum produto físico é enviado.
+            100% digital. Nenhum produto físico é enviado.
           </p>
         </div>
       </section>
