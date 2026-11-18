@@ -30,26 +30,27 @@
   --radius-lg: 8px;
 }
 :root {
-  --background: oklch(0.135 0.006 255);
-  --foreground: oklch(0.955 0.006 82);
-  --card: oklch(0.185 0.008 255);
-  --primary: oklch(0.735 0.085 82);
-  --primary-foreground: oklch(0.17 0.012 78);
-  --secondary: oklch(0.215 0.008 255);
-  --accent: oklch(0.265 0.012 78);
-  --muted-foreground: oklch(0.755 0.012 250);
-  --border: oklch(0.315 0.009 255);
+  --background: #17191D;
+  --foreground: #FFFFFF;
+  --card: #0D0F12;
+  --primary: #E9A52B;
+  --primary-foreground: #0D0F12;
+  --secondary: #202329;
+  --accent: #292D33;
+  --muted-foreground: #A7A9AE;
+  --border: #383C43;
   --destructive: oklch(0.65 0.19 25);
   --success: oklch(0.76 0.12 155);
   --hero-shade: linear-gradient(
     90deg,
-    oklch(0.115 0.004 260 / 0.97) 0%,
-    oklch(0.115 0.004 260 / 0.9) 27%,
-    oklch(0.115 0.004 260 / 0.48) 55%,
-    oklch(0.115 0.004 260 / 0.06) 100%
+    rgba(13, 15, 18, 0.97) 0%,
+    rgba(13, 15, 18, 0.90) 27%,
+    rgba(13, 15, 18, 0.48) 55%,
+    rgba(13, 15, 18, 0.06) 100%
   );
   --hero-bottom: linear-gradient(0deg, var(--background), transparent);
   --radius: 6px;
+  color-scheme: dark;
 }
 @layer base {
   * {
@@ -400,8 +401,8 @@
     background: linear-gradient(
       0deg,
       var(--background) 42%,
-      oklch(0.145 0.004 260 / 0.4) 75%,
-      oklch(0.145 0.004 260 / 0.2)
+      rgba(13, 15, 18, 0.40) 75%,
+      rgba(13, 15, 18, 0.20)
     );
   }
   .hero h1 {
@@ -810,4 +811,66 @@
   .module {
     transition: none;
   }
+}
+
+
+/* Identidade visual oficial — Farol Turbo Pro */
+:root {
+  --gold-soft: color-mix(in srgb, #E9A52B 72%, #FFFFFF);
+  --surface-raised: #202329;
+  --surface-deep: #0D0F12;
+}
+
+body { background-color: #17191D; color: #FFFFFF; }
+
+.section-alt {
+  background:
+    linear-gradient(135deg, rgba(233, 165, 43, 0.035), transparent 48%),
+    #0D0F12;
+}
+
+.section, .trust-strip { border-color: rgba(167, 169, 174, 0.2); }
+
+.eyebrow, .module-number, .trust-item svg, .check-row svg, .faq-row summary svg {
+  color: #E9A52B;
+}
+
+.module, .material-card, .question-panel, .audience-panel,
+.preparation-grid > div, .offer, .faq-row {
+  border-color: rgba(167, 169, 174, 0.24);
+  background-color: #0D0F12;
+}
+
+.module, .material-card, .offer, .simulator {
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+}
+
+.module:hover { border-color: rgba(233, 165, 43, 0.58); }
+
+.offer-featured {
+  border-color: rgba(233, 165, 43, 0.72);
+  background:
+    linear-gradient(145deg, rgba(233, 165, 43, 0.055), transparent 55%),
+    #0D0F12;
+}
+
+.offer-label { background: #E9A52B; color: #0D0F12; }
+
+.cta { font-size: 15px; font-weight: 700; letter-spacing: 0.015em; }
+
+.number-input { border-color: rgba(167, 169, 174, 0.38); }
+
+.number-input:focus-visible, .faq-row summary:focus-visible,
+a:focus-visible, button:focus-visible {
+  outline: 2px solid #E9A52B;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .hero-shade {
+    background: linear-gradient(
+      0deg, #17191D 42%, rgba(13, 15, 18, 0.4) 75%, rgba(13, 15, 18, 0.2)
+    );
+  }
+  .section-copy { font-size: 16px; }
 }
