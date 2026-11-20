@@ -66,6 +66,14 @@ const modules = [
     "Conheça os cuidados finais para buscar um resultado visual bem executado.",
   ],
 ];
+const showcaseMaterials = [
+  ["01-ebook-farol-turbo-pro.webp", "Ebook Farol Turbo Pro", "Guia completo da restauração"],
+  ["02-checklist-12-etapas.webp", "Checklist em 12 etapas", "Acompanhe cada fase do processo"],
+  ["03-planilha-custo-servico.webp", "Planilha de custo por serviço", "Organize custos e preços"],
+  ["04-whatsapp-33-mensagens.webp", "WhatsApp que Vende", "33 mensagens prontas para usar"],
+  ["05-kit-primeiros-10-clientes.webp", "Kit Primeiros 10 Clientes", "Apoio para conquistar os primeiros clientes"],
+  ["06-planilha-prospeccao.webp", "Planilha de prospecção", "Organize contatos e oportunidades"],
+];
 const faqs = [
   [
     "Preciso já trabalhar com estética automotiva?",
@@ -386,6 +394,22 @@ function Index() {
             ))}
           </div>
         </div>
+          <div className="mt-12 grid items-center gap-8 rounded-xl border border-border bg-card p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
+            <div>
+              <div className="eyebrow">Sua preparação</div>
+              <h3 className="text-2xl font-semibold leading-tight">
+                Antes de oferecer, <span className="text-primary">aprenda e pratique.</span>
+              </h3>
+              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                Conheça os materiais envolvidos na restauração e organize sua prática com a orientação inicial do Farol Turbo Pro.
+              </p>
+              <div className="preparation-note mt-5 flex items-center gap-3 text-sm">
+                <Wrench className="size-5 shrink-0 text-primary" />
+                Orientação digital sobre os materiais, não um kit físico.
+              </div>
+            </div>
+            <img src="/images/preparacao-restauracao-farois.jpg.jpeg" alt="Preparação prática para restauração de faróis em oficina" className="block h-auto max-h-[340px] w-full rounded-lg object-contain" loading="lazy" />
+          </div>
       </section>
       <section className="section" id="simulador">
         <div className="site-container">
@@ -406,103 +430,35 @@ function Index() {
           </p>
         </div>
       </section>
-      <section className="section section-alt">
+      <section className="section showcase-section" aria-label="Materiais incluídos no Farol Turbo Pro">
         <div className="site-container">
-          <div className="eyebrow">Sua preparação</div>
-          <div className="preparation-grid grid gap-10 md:grid-cols-2">
-            <h2 className="section-title">
-              Antes de oferecer,
-              <br />
-              <span className="text-primary">aprenda e pratique.</span>
-            </h2>
-            <div>
-              <p className="section-copy">
-                Conhecer os materiais é parte da preparação. O Farol Turbo Pro apresenta uma
-                orientação inicial para entender os itens envolvidos na restauração e organizar sua
-                prática.
-              </p>
-              <div className="preparation-note mt-5 flex items-center gap-3 text-sm">
-                <Wrench className="size-5 text-primary" />
-                Orientação digital sobre os materiais, não um kit físico.
-              </div>
-            </div>
-          </div>
-          <div className="mt-10 overflow-hidden rounded-xl">
-            <img
-              src="/images/preparacao-restauracao-farois.jpg.jpeg"
-              alt="Preparação prática para restauração de faróis em oficina"
-              className="block h-auto max-h-[520px] w-full object-contain"
-            />
-          </div>
-        </div>
-      </section>
-      <section className="section">
-        <div className="site-container">
-          <div className="eyebrow">Materiais complementares</div>
+          <div className="eyebrow">Por dentro do treinamento</div>
           <h2 className="section-title">
-            Conhecimento que acompanha
-            <br />
-            <span className="text-primary">sua prática e seu atendimento.</span>
+            Veja por dentro tudo o que <span className="text-primary">você vai receber!</span>
           </h2>
-          <div className="materials-layout mt-10 grid gap-8 md:grid-cols-[180px_1fr]">
-            <div className="flex justify-center py-5">
-              <div className="digital-art" aria-hidden="true">
-                <CarFront className="size-6 text-primary" />
-                <strong>
-                  FAROL
-                  <br />
-                  TURBO <span className="text-primary">PRO</span>
-                </strong>
-                <span className="text-xs text-muted-foreground">GUIA DIGITAL</span>
-              </div>
-            </div>
-            <div className="material-grid grid gap-x-10 gap-y-8 sm:grid-cols-2">
-              {[
-                [
-                  FileText,
-                  "📘 Ebook completo Farol Turbo Pro",
-                  "Conteúdo principal para estudar as etapas, os cuidados e os fundamentos da restauração de faróis.",
-                ],
-                [
-                  ListChecks,
-                  "📋 Checklist de Restauração em 12 Etapas",
-                  "Roteiro de apoio para acompanhar e organizar cada fase do procedimento.",
-                ],
-                [
-                  Gauge,
-                  "📊 Planilha de Custo por Serviço",
-                  "Organize os gastos de cada atendimento e calcule seus custos antes de definir o preço.",
-                ],
-                [
-                  MessageCircle,
-                  "📲 WhatsApp que Vende: 33 mensagens prontas",
-                  "Mensagens para iniciar conversas, apresentar o serviço e fazer o acompanhamento de interessados.",
-                ],
-                [
-                  TrendingUp,
-                  "🎯 Kit Primeiros 10 Clientes",
-                  "Material de apoio com orientações para buscar os primeiros clientes e começar a divulgar o serviço.",
-                ],
-                [
-                  Laptop,
-                  "📈 Planilha de Prospecção de Clientes",
-                  "Registre contatos, acompanhe conversas e organize oportunidades de atendimento.",
-                ],
-              ].map(([Icon, title, text]) => {
-                const MaterialIcon = Icon as typeof FileText;
-                return (
-                  <div key={String(title)} className="material-card">
-                    <MaterialIcon className="mb-4 size-6 text-primary" />
-                    <h3 className="text-xl font-semibold">{String(title)}</h3>
-                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                      {String(text)}
-                    </p>
+          <p className="section-copy mt-5 max-w-2xl">
+            Conheça os materiais, ferramentas e conteúdos que fazem parte do Farol Turbo Pro.
+          </p>
+          <div className="showcase-marquee mt-10" aria-label="Carrossel contínuo dos seis materiais digitais">
+            <div className="showcase-track">
+              {[...showcaseMaterials, ...showcaseMaterials].map(([image, title, description], index) => (
+                <article className="showcase-card" key={`${title}-${index}`}>
+                  <div className="showcase-image-wrap">
+                    <div className="showcase-image-fallback" aria-hidden="true">
+                      <FileText className="size-10 text-primary" />
+                      <span>PRÉVIA DO MATERIAL</span>
+                    </div>
+                    <img src={`/images/${image}`} alt={`Prévia ilustrativa: ${title}`} className="showcase-image" loading="lazy" />
                   </div>
-                );
-              })}
+                  <div className="showcase-card-copy">
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                  </div>
+                </article>
+              ))}
             </div>
           </div>
-          <p className="mt-8 text-xs text-muted-foreground">
+          <p className="mt-5 text-xs text-muted-foreground">
             Os seis materiais digitais estão incluídos nas versões Digital e Completo.
           </p>
         </div>
