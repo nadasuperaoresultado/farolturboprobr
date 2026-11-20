@@ -140,7 +140,7 @@ function RootComponent() {
 
     const bootstrap = document.createElement("script");
     bootstrap.setAttribute("data-meta-pixel", "1770089784096794");
-    bootstrap.text = `!function(f,b,e,v,n,t,s)
+    bootstrap.text = `!function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
