@@ -575,7 +575,7 @@ function Index() {
           <div className="mx-auto mt-12 max-w-2xl">
             <article className="offer offer-featured flex flex-col text-center">
               <span className="offer-label mx-auto">22 VIDEO AULAS + 5 BÔNUS + ACESSO VITALÍCIO</span>
-              <CirclePlay className="mx-auto mb-5 mt-2 size-8 text-primary" />
+              <img src="/images/Mockup%203D%20Farol%20Turbo%20Pro.png" alt="Mockup do iPad com a área de membros e as videoaulas do Farol Turbo Pro" className="mx-auto mb-5 mt-2 block h-auto max-h-[280px] w-full max-w-[420px] rounded-xl object-contain" loading="lazy" />
               <span className="text-xs font-semibold text-muted-foreground">FAROL TURBO PRO</span>
               <h3 className="mt-2 text-4xl font-bold">COMPLETO</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
