@@ -460,23 +460,33 @@ function Index() {
               {[
                 [
                   FileText,
-                  "📘 Guia Farol Turbo Pro",
-                  "Material digital de apoio para acompanhar os conteúdos e consultar as orientações.",
+                  "📘 Ebook completo Farol Turbo Pro",
+                  "Conteúdo principal para estudar as etapas, os cuidados e os fundamentos da restauração de faróis.",
                 ],
                 [
                   ListChecks,
-                  "📋 Checklist de restauração",
-                  "12 etapas para ajudar a organizar o procedimento.",
+                  "📋 Checklist de Restauração em 12 Etapas",
+                  "Roteiro de apoio para acompanhar e organizar cada fase do procedimento.",
                 ],
                 [
                   Gauge,
-                  "📊 Planilha de custo por serviço",
-                  "Uma ferramenta para organizar custos e auxiliar no cálculo do preço.",
+                  "📊 Planilha de Custo por Serviço",
+                  "Organize os gastos de cada atendimento e calcule seus custos antes de definir o preço.",
                 ],
                 [
                   MessageCircle,
-                  "📲 WhatsApp que Vende",
-                  "33 mensagens prontas para apoiar a comunicação com possíveis clientes.",
+                  "📲 WhatsApp que Vende: 33 mensagens prontas",
+                  "Mensagens para iniciar conversas, apresentar o serviço e fazer o acompanhamento de interessados.",
+                ],
+                [
+                  TrendingUp,
+                  "🎯 Kit Primeiros 10 Clientes",
+                  "Material de apoio com orientações para buscar os primeiros clientes e começar a divulgar o serviço.",
+                ],
+                [
+                  Laptop,
+                  "📈 Planilha de Prospecção de Clientes",
+                  "Registre contatos, acompanhe conversas e organize oportunidades de atendimento.",
                 ],
               ].map(([Icon, title, text]) => {
                 const MaterialIcon = Icon as typeof FileText;
@@ -493,7 +503,7 @@ function Index() {
             </div>
           </div>
           <p className="mt-8 text-xs text-muted-foreground">
-            Os quatro materiais digitais estão incluídos nas versões Digital e Completo.
+            Os seis materiais digitais estão incluídos nas versões Digital e Completo.
           </p>
         </div>
       </section>
