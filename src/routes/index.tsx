@@ -555,40 +555,17 @@ function Index() {
       <section className="section" id="versoes">
         <div className="site-container">
           <div className="text-center">
-            <div className="eyebrow justify-center">Escolha sua versão</div>
+            <div className="eyebrow justify-center">Conheça o treinamento</div>
             <h2 className="section-title">
-              Duas formas de começar.
+              Uma formação completa.
               <br />
-              <span className="text-primary">Uma nova habilidade para aprender.</span>
+              <span className="text-primary">Tudo em um só lugar.</span>
             </h2>
             <p className="section-copy mt-5">
-              Escolha como deseja conhecer a restauração de faróis.
+              Aprenda com os materiais digitais e as aulas em vídeo do Farol Turbo Pro.
             </p>
           </div>
-          <div className="mx-auto mt-12 grid max-w-4xl gap-7 md:grid-cols-2">
-            <article className="offer flex flex-col">
-              <FileText className="mb-6 size-8 text-primary" />
-              <span className="text-xs font-semibold text-muted-foreground">FAROL TURBO PRO</span>
-              <h3 className="mt-2 text-4xl font-bold">DIGITAL</h3>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Para quem deseja acessar os materiais digitais.
-              </p>
-              <div className="my-7 space-y-3">
-                {offers.digital.materials.map((material) => (
-                  <CheckRow key={material}>{material}</CheckRow>
-                ))}
-                <CheckRow>Entrega por link do Google Drive</CheckRow>
-              </div>
-              <div className="mt-auto border-t border-border pt-6">
-                <p className="text-lg font-semibold">Oferta em breve</p>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  O preço será informado na abertura das inscrições.
-                </p>
-                <Button disabled variant="outline" className="cta mt-6 w-full">
-                  Versão digital em breve <ArrowRight />
-                </Button>
-              </div>
-            </article>
+          <div className="mx-auto mt-12 max-w-2xl">
             <article className="offer offer-featured flex flex-col">
               <span className="offer-label">INCLUI AULAS EM VÍDEO</span>
               <CirclePlay className="mb-6 size-8 text-primary" />
