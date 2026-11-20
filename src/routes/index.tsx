@@ -21,7 +21,7 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { estimateMonthlyRevenue, formatBRL } from "@/lib/revenue";
 import { offers } from "@/lib/offers";
-import heroAsset from "@/assets/farol-hero.png";
+import heroAsset from "@/assets/farol-hero.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -241,7 +241,7 @@ function Index() {
       <section className="hero">
         <img
           className="hero-photo"
-          src={heroAsset}
+          src={heroAsset.url}
           alt="Foto ilustrativa de um farol transparente em um veículo em oficina de estética automotiva"
           fetchPriority="high"
         />
@@ -327,7 +327,7 @@ function Index() {
         <div className="site-container grid items-center gap-12 md:grid-cols-2">
           <div className="relative">
             <img
-              src={heroAsset}
+              src={heroAsset.url}
               alt="Detalhes da transparência e das lentes de um farol — imagem ilustrativa"
               className="aspect-[4/3] w-full rounded-md object-cover object-right"
               loading="lazy"
