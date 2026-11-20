@@ -67,12 +67,12 @@ const modules = [
   ],
 ];
 const showcaseMaterials = [
-  ["01-ebook-farol-turbo-pro.webp", "Ebook Farol Turbo Pro", "Guia completo da restauração"],
-  ["02-checklist-12-etapas.webp", "Checklist em 12 etapas", "Acompanhe cada fase do processo"],
-  ["03-planilha-custo-servico.webp", "Planilha de custo por serviço", "Organize custos e preços"],
-  ["04-whatsapp-33-mensagens.webp", "WhatsApp que Vende", "33 mensagens prontas para usar"],
-  ["05-kit-primeiros-10-clientes.webp", "Kit Primeiros 10 Clientes", "Apoio para conquistar os primeiros clientes"],
-  ["06-planilha-prospeccao.webp", "Planilha de prospecção", "Organize contatos e oportunidades"],
+  ["01-ebook-farol-turbo-pro.png", "Ebook Farol Turbo Pro", "Guia completo da restauração"],
+  ["02-checklist-12-etapas.png", "Checklist em 12 etapas", "Acompanhe cada fase do processo"],
+  ["03-planilha-custo-servico.png", "Planilha de custo por serviço", "Organize custos e preços"],
+  ["04-whatsapp-33-mensagens.png", "WhatsApp que Vende", "33 mensagens prontas para usar"],
+  ["05-kit-primeiros-10-clientes.png", "Kit Primeiros 10 Clientes", "Apoio para conquistar os primeiros clientes"],
+  ["06-planilha-prospeccao.png", "Planilha de prospecção", "Organize contatos e oportunidades"],
 ];
 const faqs = [
   [
