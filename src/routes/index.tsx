@@ -427,6 +427,13 @@ function Index() {
               </div>
             </div>
           </div>
+          <div className="mt-10 overflow-hidden rounded-xl">
+            <img
+              src="/images/preparacao-restauracao-farois.jpg.jpeg"
+              alt="Preparação prática para restauração de faróis em oficina"
+              className="block h-auto max-h-[520px] w-full object-contain"
+            />
+          </div>
         </div>
       </section>
       <section className="section">
