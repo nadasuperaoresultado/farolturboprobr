@@ -529,32 +529,30 @@ function Index() {
           </p>
         </div>
       </section>
-      <section className="section section-alt">
-        <div className="site-container grid gap-12 md:grid-cols-2">
+      <section className="section section-alt audience-section">
+        <div className="site-container grid items-center gap-7 md:grid-cols-2">
           <div>
             <div className="eyebrow">Para quem é</div>
             <h2 className="section-title">
               Seu próximo passo
               <br />
-              <span className="text-primary">pode começar aqui.</span>
+              <span className="text-primary">começa com conhecimento.</span>
             </h2>
-            <p className="section-copy mt-5">
-              Para quem deseja aprender uma nova habilidade prática e conhecer um serviço do
-              segmento automotivo.
+            <p className="section-copy mt-3">
+              Aprenda uma técnica prática e conheça novas possibilidades no mercado automotivo.
             </p>
           </div>
-          <div className="audience-panel space-y-4">
+          <div className="audience-panel audience-panel-compact space-y-1">
             {[
-              "Quem procura uma possibilidade de renda extra.",
-              "Quem está começando e quer entender as etapas da restauração.",
-              "Quem já trabalha com estética automotiva e deseja conhecer essa técnica.",
-              "Quem quer aprender a organizar custos e apresentar seus serviços.",
+              "Quer aprender uma habilidade prática.",
+              "Busca uma possibilidade de renda extra.",
+              "Está começando ou já atua com estética automotiva.",
+              "Quer entender custos e apresentar seu serviço.",
             ].map((text) => (
               <CheckRow key={text}>{text}</CheckRow>
             ))}
-            <p className="pt-4 text-xs leading-relaxed text-muted-foreground">
-              O treinamento é educacional. Aprendizado, prática, qualidade da execução e conquista
-              de clientes dependem da dedicação e das condições de cada pessoa.
+            <p className="audience-disclaimer text-xs leading-relaxed text-muted-foreground">
+              Treinamento educacional. A prática e os resultados dependem da dedicação e das condições de cada pessoa.
             </p>
           </div>
         </div>
