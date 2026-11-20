@@ -326,7 +326,7 @@ function Index() {
         <div className="site-container grid items-center gap-12 md:grid-cols-2">
           <div className="relative">
             <img
-              src="https://raw.githubusercontent.com/nadasuperaoresultado/farolturboprobr/main/farol-transformacao.png"
+              src={`https://raw.githubusercontent.com/nadasuperaoresultado/farolturboprobr/main/Antes%20e%20Depois_%20Restaurac%CC%A7a%CC%83o%20do%20Farol.png`}
               alt="Detalhes da transparência e das lentes de um farol — imagem ilustrativa"
               className="aspect-[4/3] w-full rounded-md object-cover object-right"
               loading="lazy"
