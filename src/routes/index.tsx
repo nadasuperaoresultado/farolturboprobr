@@ -67,12 +67,15 @@ const modules = [
   ],
 ];
 const showcaseMaterials = [
-  ["01-ebook-farol-turbo-pro.png", "Ebook Farol Turbo Pro", "Guia completo da restauração"],
-  ["02-checklist-12-etapas.png", "Checklist em 12 etapas", "Acompanhe cada fase do processo"],
-  ["03-planilha-custo-servico.png", "Planilha de custo por serviço", "Organize custos e preços"],
-  ["04-whatsapp-33-mensagens.png", "WhatsApp que Vende", "33 mensagens prontas para usar"],
-  ["05-kit-primeiros-10-clientes.png", "Kit Primeiros 10 Clientes", "Apoio para conquistar os primeiros clientes"],
-  ["06-planilha-prospeccao.png", "Planilha de prospecção", "Organize contatos e oportunidades"],
+  ["01-ebook-farol-turbo-pro-por-dentro.png", "Ebook Farol Turbo Pro", "Veja por dentro o guia de restauração"],
+  ["02-checklist-12-etapas.png", "Checklist em 12 etapas", "Capa do material"],
+  ["02-checklist-12-etapas-por-dentro.png", "Checklist em 12 etapas", "Veja uma prévia do conteúdo interno"],
+  ["03-custos-capa.png.png", "Planilha de custos", "Organize custos e preços por serviço"],
+  ["04-whatsapp-capa.png", "WhatsApp que Vende", "Capa do material com mensagens prontas"],
+  ["04-whatsapp-por-dentro.png", "WhatsApp que Vende", "Veja por dentro as mensagens para usar"],
+  ["5-clientes-capa.png", "Kit Primeiros 5 Clientes", "Capa do material de apoio para conquistar clientes"],
+  ["05-clientes-por-dentro.png", "Kit Primeiros 5 Clientes", "Veja por dentro o conteúdo de apoio"],
+  ["06-prospeccao-capa.png.png", "Planilha de prospecção", "Organize contatos e oportunidades"],
 ];
 const faqs = [
   [
