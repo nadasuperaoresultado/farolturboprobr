@@ -327,8 +327,8 @@ function Index() {
           <div className="relative">
             <img
               src={`/images/antes-depois-restauracao.png`}
-              alt="Detalhes da transparência e das lentes de um farol — imagem ilustrativa"
-              className="aspect-[4/3] w-full rounded-md object-cover object-right"
+              alt="Comparação de antes e depois da restauração de um farol, com as duas condições visíveis por completo"
+              className="block h-auto max-h-[520px] w-full rounded-md object-contain"
               loading="lazy"
             />
             <span className="mt-3 block text-xs text-muted-foreground">
