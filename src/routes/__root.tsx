@@ -139,32 +139,31 @@ function RootComponent() {
     const pixelWindow = window as typeof window & {
       __farolMetaPixelInitialized?: boolean;
       fbq?: (...args: unknown[]) => void;
+      _fbq?: (...args: unknown[]) => void;
     };
 
-    // Guard against React remounts and any second installation of this Pixel.
-    if (
-      pixelWindow.__farolMetaPixelInitialized ||
-      typeof pixelWindow.fbq === "function" ||
-      document.querySelector('script[data-meta-pixel="1770089784096794"]')
-    ) {
-      return;
-    }
+    // Prevent this app from initializing or tracking the same Pixel twice.
+    if (pixelWindow.__farolMetaPixelInitialized) return;
 
-    pixelWindow.__farolMetaPixelInitialized = true;
-
-    const bootstrap = document.createElement("script");
-    bootstrap.setAttribute("data-meta-pixel", "1770089784096794");
-    bootstrap.text = `!function(f,b,e,v,n,t,s){
+    // Reuse an existing Meta Pixel loader when another integration created it.
+    // The presence of fbq alone must not prevent this Pixel ID from being initialized.
+    if (typeof pixelWindow.fbq !== "function") {
+      const bootstrap = document.createElement("script");
+      bootstrap.setAttribute("data-meta-pixel", "1770089784096794");
+      bootstrap.text = `!function(f,b,e,v,n,t,s){
 if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
 if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1770089784096794');
-fbq('track', 'PageView');`;
-    document.head.appendChild(bootstrap);
+'https://connect.facebook.net/en_US/fbevents.js');`;
+      document.head.appendChild(bootstrap);
+    }
+
+    pixelWindow.fbq?.("init", "1770089784096794");
+    pixelWindow.fbq?.("track", "PageView");
+    pixelWindow.__farolMetaPixelInitialized = true;
   }, []);
 
   return (
