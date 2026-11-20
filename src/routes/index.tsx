@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
@@ -222,6 +222,9 @@ function Simulator() {
   );
 }
 function Index() {
+  const [selectedShowcase, setSelectedShowcase] = useState<null | { image: string; title: string; description: string }>(null);
+  const dragState = useRef({ active: false, startX: 0, startScroll: 0, moved: false });
+
   return (
     <main id="inicio">
       <header className="site-header">
@@ -442,16 +445,52 @@ function Index() {
           <p className="section-copy mt-5 max-w-2xl">
             Conheça os materiais, ferramentas e conteúdos que fazem parte do Farol Turbo Pro.
           </p>
-          <div className="showcase-marquee mt-10" aria-label="Carrossel contínuo dos seis materiais digitais">
+          <div
+            className="showcase-marquee mt-10"
+            aria-label="Carrossel contínuo dos materiais digitais. Arraste para os lados ou selecione uma imagem para ampliar."
+            onPointerDown={(event) => {
+              dragState.current = { active: true, startX: event.clientX, startScroll: event.currentTarget.scrollLeft, moved: false };
+              event.currentTarget.setPointerCapture(event.pointerId);
+            }}
+            onPointerMove={(event) => {
+              if (!dragState.current.active) return;
+              const delta = event.clientX - dragState.current.startX;
+              if (Math.abs(delta) > 5) dragState.current.moved = true;
+              event.currentTarget.scrollLeft = dragState.current.startScroll - delta;
+            }}
+            onPointerUp={() => { dragState.current.active = false; }}
+            onPointerCancel={() => { dragState.current.active = false; }}
+            onClickCapture={(event) => {
+              if (dragState.current.moved) {
+                event.preventDefault();
+                event.stopPropagation();
+                dragState.current.moved = false;
+              }
+            }}
+          >
             <div className="showcase-track">
               {[...showcaseMaterials, ...showcaseMaterials].map(([image, title, description], index) => (
-                <article className="showcase-card" key={`${title}-${index}`}>
+                <article
+                  className="showcase-card"
+                  key={`${title}-${index}`}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`Ampliar imagem: ${title}`}
+                  onClick={() => setSelectedShowcase({ image, title, description })}
+                  onKeyDown={(event) => {
+                    if (event.key === "Enter" || event.key === " ") {
+                      event.preventDefault();
+                      setSelectedShowcase({ image, title, description });
+                    }
+                  }}
+                >
                   <div className="showcase-image-wrap">
                     <div className="showcase-image-fallback" aria-hidden="true">
                       <FileText className="size-10 text-primary" />
                       <span>PRÉVIA DO MATERIAL</span>
                     </div>
-                    <img src={`/images/${image}`} alt={`Prévia ilustrativa: ${title}`} className="showcase-image" loading="lazy" />
+                    <img src={`/images/${image}`} alt={`Prévia ilustrativa: ${title}`} className="showcase-image" loading="lazy" draggable={false} />
+                    <span className="showcase-zoom-hint">Clique para ampliar</span>
                   </div>
                   <div className="showcase-card-copy">
                     <h3>{title}</h3>
@@ -461,6 +500,23 @@ function Index() {
               ))}
             </div>
           </div>
+          {selectedShowcase && (
+            <div
+              className="showcase-lightbox"
+              role="dialog"
+              aria-modal="true"
+              aria-label={`Imagem ampliada: ${selectedShowcase.title}`}
+              onClick={() => setSelectedShowcase(null)}
+              onKeyDown={(event) => { if (event.key === "Escape") setSelectedShowcase(null); }}
+            >
+              <button className="showcase-lightbox-close" type="button" aria-label="Fechar imagem ampliada" onClick={() => setSelectedShowcase(null)}>×</button>
+              <div className="showcase-lightbox-content" onClick={(event) => event.stopPropagation()}>
+                <img src={`/images/${selectedShowcase.image}`} alt={selectedShowcase.title} />
+                <h3>{selectedShowcase.title}</h3>
+                <p>{selectedShowcase.description}</p>
+              </div>
+            </div>
+          )}
           <p className="mt-5 text-xs text-muted-foreground">
             Os seis materiais digitais estão incluídos nas versões Digital e Completo.
           </p>
