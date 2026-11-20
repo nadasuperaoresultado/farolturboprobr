@@ -1,8 +1,10 @@
 export const digitalMaterials = [
-  "Guia Farol Turbo Pro",
-  "Checklist de Restauração — 12 etapas",
+  "Ebook completo Farol Turbo Pro",
+  "Checklist de Restauração em 12 Etapas",
   "Planilha de Custo por Serviço",
   "WhatsApp que Vende — 33 mensagens prontas",
+  "Kit Primeiros 10 Clientes",
+  "Planilha de Prospecção de Clientes",
 ];
 
 export const offers = {
