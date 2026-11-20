@@ -136,7 +136,21 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
 
   useEffect(() => {
-    if (document.querySelector('script[data-meta-pixel="1770089784096794"]')) return;
+    const pixelWindow = window as typeof window & {
+      __farolMetaPixelInitialized?: boolean;
+      fbq?: (...args: unknown[]) => void;
+    };
+
+    // Guard against React remounts and any second installation of this Pixel.
+    if (
+      pixelWindow.__farolMetaPixelInitialized ||
+      typeof pixelWindow.fbq === "function" ||
+      document.querySelector('script[data-meta-pixel="1770089784096794"]')
+    ) {
+      return;
+    }
+
+    pixelWindow.__farolMetaPixelInitialized = true;
 
     const bootstrap = document.createElement("script");
     bootstrap.setAttribute("data-meta-pixel", "1770089784096794");
