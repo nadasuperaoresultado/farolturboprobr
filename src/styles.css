@@ -979,3 +979,59 @@ a:focus-visible, button:focus-visible {
   .showcase-lightbox-content img { max-height: 75vh; }
   .showcase-zoom-hint { opacity: 1; font-size: 10px; }
 }
+
+
+/* Seção "Para quem é": versão compacta, com prioridade para a dobra mobile */
+.audience-section {
+  padding-top: 58px;
+  padding-bottom: 58px;
+}
+.audience-panel-compact {
+  padding: 16px 22px;
+}
+.audience-panel-compact .check-row {
+  padding: 7px 0;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.audience-disclaimer {
+  margin-top: 8px;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in oklab, var(--border) 75%, transparent);
+}
+@media (max-width: 767px) {
+  .audience-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .audience-section .site-container {
+    gap: 16px;
+  }
+  .audience-section .section-title {
+    font-size: clamp(29px, 8vw, 36px);
+    line-height: 1.06;
+  }
+  .audience-section .section-copy {
+    margin-top: 9px;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .audience-panel-compact {
+    padding: 10px 15px;
+  }
+  .audience-panel-compact .check-row {
+    padding: 6px 0;
+    font-size: 13px;
+    line-height: 1.35;
+  }
+  .audience-panel-compact .check-row svg {
+    width: 16px;
+    height: 16px;
+  }
+  .audience-disclaimer {
+    margin-top: 5px;
+    padding-top: 8px;
+    font-size: 10px;
+    line-height: 1.4;
+  }
+}
