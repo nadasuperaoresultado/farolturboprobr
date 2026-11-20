@@ -126,6 +126,13 @@ function CheckRow({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+function OfferCheckRow({ children }: { children: React.ReactNode }) {
+  return (
+    <div className="check-row">
+      <Check className="text-emerald-500" /> <span>{children}</span>
+    </div>
+  );
+}
 function Wordmark() {
   return (
     <a href="#inicio" aria-label="Farol Turbo Pro, início" className="wordmark">
@@ -566,27 +573,31 @@ function Index() {
             </p>
           </div>
           <div className="mx-auto mt-12 max-w-2xl">
-            <article className="offer offer-featured flex flex-col">
-              <span className="offer-label">INCLUI AULAS EM VÍDEO</span>
-              <CirclePlay className="mb-6 size-8 text-primary" />
+            <article className="offer offer-featured flex flex-col text-center">
+              <span className="offer-label mx-auto">INCLUI AULAS EM VÍDEO — 22 VIDEO AULAS + 5 BÔNUS + ACESSO VITALÍCIO</span>
+              <CirclePlay className="mx-auto mb-5 mt-2 size-8 text-primary" />
               <span className="text-xs font-semibold text-muted-foreground">FAROL TURBO PRO</span>
               <h3 className="mt-2 text-4xl font-bold">COMPLETO</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
                 Para quem deseja aprender também com as aulas em vídeo.
               </p>
-              <div className="my-7 space-y-3">
+              <div className="my-7 space-y-3 text-left">
                 {offers.complete.materials.map((material) => (
-                  <CheckRow key={material}>{material}</CheckRow>
+                  <OfferCheckRow key={material}>{material}</OfferCheckRow>
                 ))}
               </div>
-              <div className="mt-auto border-t border-border pt-6">
-                <p className="text-lg font-semibold">Oferta em breve</p>
-                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
-                  Preço e condições de acesso serão informados na abertura das inscrições.
-                </p>
-                <Button disabled variant="hero" className="cta mt-6 w-full">
-                  Treinamento completo em breve <ArrowRight />
+              <div className="mt-auto border-t border-border pt-6 text-center">
+                <p className="text-sm font-medium text-muted-foreground">De R$ 59,90 por apenas</p>
+                <p className="mt-1 text-5xl font-extrabold tracking-tight text-primary">R$ 19,90</p>
+                <p className="mt-2 text-sm text-muted-foreground">À vista, ou em até 4x de R$ 5,63</p>
+                <Button asChild variant="hero" className="cta mt-6 w-full">
+                  <a href="https://pay.cakto.com.br/3br6uum_1309312" target="_blank" rel="noopener noreferrer">
+                    QUERO A OFERTA COMPLETA <ArrowRight />
+                  </a>
                 </Button>
+                <p className="mt-4 text-[11px] leading-relaxed text-muted-foreground">
+                  Compra protegida <span className="px-1">|</span> Acesso vitalício <span className="px-1">|</span> Acesso imediato
+                </p>
               </div>
             </article>
           </div>
