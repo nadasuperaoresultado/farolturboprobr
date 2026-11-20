@@ -129,7 +129,7 @@ function CheckRow({ children }: { children: React.ReactNode }) {
 function OfferCheckRow({ children }: { children: React.ReactNode }) {
   return (
     <div className="check-row">
-      <Check className="text-emerald-500" /> <span>{children}</span>
+      <Check className="!text-green-500" /> <span>{children}</span>
     </div>
   );
 }
@@ -574,12 +574,12 @@ function Index() {
           </div>
           <div className="mx-auto mt-12 max-w-2xl">
             <article className="offer offer-featured flex flex-col text-center">
-              <span className="offer-label mx-auto">INCLUI AULAS EM VÍDEO — 22 VIDEO AULAS + 5 BÔNUS + ACESSO VITALÍCIO</span>
+              <span className="offer-label mx-auto">22 VIDEO AULAS + 5 BÔNUS + ACESSO VITALÍCIO</span>
               <CirclePlay className="mx-auto mb-5 mt-2 size-8 text-primary" />
               <span className="text-xs font-semibold text-muted-foreground">FAROL TURBO PRO</span>
               <h3 className="mt-2 text-4xl font-bold">COMPLETO</h3>
               <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Para quem deseja aprender também com as aulas em vídeo.
+                Com seu primeiro serviço, você já pode faturar até 5x o valor investido neste treinamento!
               </p>
               <div className="my-7 space-y-3 text-left">
                 {offers.complete.materials.map((material) => (
