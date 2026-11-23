@@ -3,6 +3,7 @@ import { useRef, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
+  Award,
   Check,
   ChevronDown,
   CirclePlay,
@@ -16,6 +17,7 @@ import {
   ShieldCheck,
   TrendingUp,
   Wrench,
+  Zap,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
@@ -259,14 +261,7 @@ function Index() {
         </div>
       </header>
       <section className="hero">
-        <img
-          className="hero-photo"
-          src="/images/Mockup%203D%20Farol%20Turbo%20Pro.png"
-          alt="Mockup 3D do treinamento Farol Turbo Pro, igual ao exibido na oferta"
-          fetchPriority="high"
-        />
-        <div className="hero-shade" />
-        <div className="site-container">
+        <div className="site-container hero-layout">
           <div className="hero-copy">
             <div className="eyebrow">Uma nova habilidade. Novas possibilidades.</div>
             <h1>
@@ -281,13 +276,28 @@ function Index() {
               calcular o preço dos serviços para começar a oferecer restauração de faróis.
             </p>
             <CTA className="mt-7" />
-            <div className="mt-5 flex items-center gap-2 text-xs text-muted-foreground">
-              <ShieldCheck className="size-4" />
-              Treinamento e materiais 100% digitais
+            <div className="hero-assurances" aria-label="Garantias e segurança da compra">
+              <div className="hero-assurance">
+                <Award aria-hidden="true" />
+                <span>Satisfação garantida</span>
+              </div>
+              <div className="hero-assurance">
+                <ShieldCheck aria-hidden="true" />
+                <span>Compra segura</span>
+              </div>
+              <div className="hero-assurance">
+                <Zap aria-hidden="true" />
+                <span>Acesso imediato</span>
+              </div>
             </div>
-            <p className="mt-2 text-[10px] text-muted-foreground">
-              Consulte as condições de acesso de cada versão.
-            </p>
+          </div>
+          <div className="hero-visual">
+            <img
+              className="hero-photo"
+              src="/images/Mockup%203D%20Farol%20Turbo%20Pro.png"
+              alt="Mockup 3D do treinamento Farol Turbo Pro e seus materiais digitais"
+              fetchPriority="high"
+            />
           </div>
         </div>
       </section>
