@@ -69,6 +69,8 @@ const modules = [
   ],
 ];
 const showcaseMaterials = [
+  ["Curso Farol Turbo Pro_ Restauração Profissional.png", "Curso Farol Turbo Pro", "Capa oficial do treinamento de restauração profissional"],
+  ["Plataforma Farol Turbo Pro.png", "Plataforma de videoaulas", "Veja como é a área interna das aulas"],
   ["01-ebook-farol-turbo-pro-por-dentro.png", "Ebook Farol Turbo Pro", "Veja por dentro o guia de restauração"],
   ["02-checklist-12-etapas.png", "Checklist em 12 etapas", "Capa do material"],
   ["02-checklist-12-etapas-por-dentro.png", "Checklist em 12 etapas", "Veja uma prévia do conteúdo interno"],
