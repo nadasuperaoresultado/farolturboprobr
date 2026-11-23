@@ -506,21 +506,13 @@ function Index() {
             ))}
           </div>
         </div>
-          <div className="mt-12 grid items-center gap-8 rounded-xl border border-border bg-card p-6 md:grid-cols-[0.9fr_1.1fr] md:p-8">
-            <div>
-              <div className="eyebrow">Sua preparação</div>
-              <h3 className="text-2xl font-semibold leading-tight">
-                Antes de oferecer, <span className="text-primary">aprenda e pratique.</span>
-              </h3>
-              <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                Conheça os materiais envolvidos na restauração e organize sua prática com a orientação inicial do Farol Turbo Pro.
-              </p>
-              <div className="preparation-note mt-5 flex items-center gap-3 text-sm">
-                <Wrench className="size-5 shrink-0 text-primary" />
-                Orientação digital sobre os materiais, não um kit físico.
-              </div>
-            </div>
-            <img src="/images/Farol%20Turbo%20Pro_%20Aprenda%20e%20Lucre.png" alt="Preparação prática para restauração de faróis em oficina" className="block h-auto max-h-[340px] w-full rounded-lg object-contain" loading="lazy" />
+          <div className="mt-12 flex justify-center">
+            <img
+              src="/images/Farol%20Turbo%20Pro_%20Aprenda%20e%20Lucre.png"
+              alt="Preparação prática para restauração de faróis em oficina"
+              className="block h-auto max-h-[460px] w-full max-w-5xl object-contain"
+              loading="lazy"
+            />
           </div>
       </section>
       <section className="section" id="simulador">
