@@ -518,7 +518,7 @@ function Index() {
                 Orientação digital sobre os materiais, não um kit físico.
               </div>
             </div>
-            <img src="/images/preparacao-restauracao-farois.jpg.jpeg" alt="Preparação prática para restauração de faróis em oficina" className="block h-auto max-h-[340px] w-full rounded-lg object-contain" loading="lazy" />
+            <img src="/images/Farol%20Turbo%20Pro_%20Aprenda%20e%20Lucre.png" alt="Preparação prática para restauração de faróis em oficina" className="block h-auto max-h-[340px] w-full rounded-lg object-contain" loading="lazy" />
           </div>
       </section>
       <section className="section" id="simulador">
