@@ -416,6 +416,7 @@ function Index() {
               <CheckRow key={text}>{text}</CheckRow>
             ))}
           </div>
+          </div>
           <div className="trust-strip">
             <div className="trust-item">
               <CirclePlay />
@@ -436,7 +437,6 @@ function Index() {
               </div>
             </div>
           </div>
-        </div>
       </section>
       <section className="section section-alt">
         <div className="site-container grid items-center gap-12 md:grid-cols-2">
