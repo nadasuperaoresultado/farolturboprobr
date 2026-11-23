@@ -261,8 +261,8 @@ function Index() {
       <section className="hero">
         <img
           className="hero-photo"
-          src="/images/farol-hero.png"
-          alt="Foto ilustrativa de um farol transparente em um veículo em oficina de estética automotiva"
+          src="/images/Mockup%203D%20Farol%20Turbo%20Pro.png"
+          alt="Mockup 3D do treinamento Farol Turbo Pro, igual ao exibido na oferta"
           fetchPriority="high"
         />
         <div className="hero-shade" />
