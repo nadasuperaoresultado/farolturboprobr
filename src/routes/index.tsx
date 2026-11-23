@@ -390,34 +390,35 @@ function Index() {
       <section className="section">
         <div className="site-container">
           <div className="grid items-start gap-12 md:grid-cols-2">
-          <div>
-            <div className="eyebrow">O primeiro passo</div>
-            <h2 className="section-title">
-              Uma renda extra começa com <span className="text-primary">uma nova habilidade.</span>
-            </h2>
-            <p className="section-copy mt-6">
-              Você quer complementar sua renda, trabalhar por conta própria ou aprender um serviço,
-              mas ainda não sabe por onde começar?
-            </p>
-            <p className="section-copy mt-4">
-              Começar pode parecer complicado. Aprender uma técnica com aplicação prática é o
-              primeiro passo para sair da dúvida.
-            </p>
+            <div>
+              <div className="eyebrow">O primeiro passo</div>
+              <h2 className="section-title">
+                Uma renda extra começa com <span className="text-primary">uma nova habilidade.</span>
+              </h2>
+              <p className="section-copy mt-6">
+                Você quer complementar sua renda, trabalhar por conta própria ou aprender um serviço,
+                mas ainda não sabe por onde começar?
+              </p>
+              <p className="section-copy mt-4">
+                Começar pode parecer complicado. Aprender uma técnica com aplicação prática é o
+                primeiro passo para sair da dúvida.
+              </p>
+            </div>
+            <div className="question-panel space-y-5 md:mt-10">
+              <p className="mb-7 text-sm font-semibold">Talvez você ainda se pergunte:</p>
+              {[
+                "Qual serviço aprender primeiro?",
+                "Quais materiais preciso comprar?",
+                "Como executar o procedimento corretamente?",
+                "Como calcular quanto cobrar?",
+                "Como apresentar meu serviço para conseguir clientes?",
+              ].map((text) => (
+                <CheckRow key={text}>{text}</CheckRow>
+              ))}
+            </div>
           </div>
-          <div className="question-panel space-y-5 md:mt-10">
-            <p className="mb-7 text-sm font-semibold">Talvez você ainda se pergunte:</p>
-            {[
-              "Qual serviço aprender primeiro?",
-              "Quais materiais preciso comprar?",
-              "Como executar o procedimento corretamente?",
-              "Como calcular quanto cobrar?",
-              "Como apresentar meu serviço para conseguir clientes?",
-            ].map((text) => (
-              <CheckRow key={text}>{text}</CheckRow>
-            ))}
-          </div>
-          </div>
-          <div className="trust-strip">
+
+          <div className="trust-strip mt-12">
             <div className="trust-item">
               <CirclePlay />
               <div>
@@ -437,6 +438,7 @@ function Index() {
               </div>
             </div>
           </div>
+        </div>
       </section>
       <section className="section section-alt">
         <div className="site-container grid items-center gap-12 md:grid-cols-2">
