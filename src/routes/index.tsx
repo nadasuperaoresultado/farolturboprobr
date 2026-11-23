@@ -387,30 +387,9 @@ function Index() {
           </p>
         </div>
       </section>
-      <div className="site-container">
-        <div className="trust-strip">
-          <div className="trust-item">
-            <CirclePlay />
-            <div>
-              Aprendizado passo a passo<small>Do diagnóstico ao acabamento</small>
-            </div>
-          </div>
-          <div className="trust-item">
-            <Wrench />
-            <div>
-              Uma habilidade prática<small>Para o mercado automotivo</small>
-            </div>
-          </div>
-          <div className="trust-item">
-            <Laptop />
-            <div>
-              Conteúdo digital<small>Conheça as versões disponíveis</small>
-            </div>
-          </div>
-        </div>
-      </div>
       <section className="section">
-        <div className="site-container grid items-start gap-12 md:grid-cols-2">
+        <div className="site-container">
+          <div className="grid items-start gap-12 md:grid-cols-2">
           <div>
             <div className="eyebrow">O primeiro passo</div>
             <h2 className="section-title">
@@ -436,6 +415,26 @@ function Index() {
             ].map((text) => (
               <CheckRow key={text}>{text}</CheckRow>
             ))}
+          </div>
+          <div className="trust-strip">
+            <div className="trust-item">
+              <CirclePlay />
+              <div>
+                Aprendizado passo a passo<small>Do diagnóstico ao acabamento</small>
+              </div>
+            </div>
+            <div className="trust-item">
+              <Wrench />
+              <div>
+                Uma habilidade prática<small>Para o mercado automotivo</small>
+              </div>
+            </div>
+            <div className="trust-item">
+              <Laptop />
+              <div>
+                Conteúdo digital<small>Conheça as versões disponíveis</small>
+              </div>
+            </div>
           </div>
         </div>
       </section>
