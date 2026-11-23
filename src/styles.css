@@ -130,37 +130,54 @@
 }
 .hero {
   position: relative;
-  min-height: 760px;
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: 146px 0 80px;
+  padding: 142px 0 76px;
+}
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 72px);
 }
 .hero-photo {
-  position: absolute;
-  inset: 0;
+  display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-height: 560px;
+  object-fit: contain;
   object-position: center;
 }
-.hero:after {
-  content: "";
-  position: absolute;
-  inset: auto 0 0;
-  height: 120px;
-  background: var(--hero-bottom);
-  pointer-events: none;
-}
-.hero-shade {
-  position: absolute;
-  inset: 0;
-  background: var(--hero-shade);
+.hero-visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
 }
 .hero-copy {
   position: relative;
   z-index: 2;
   max-width: 615px;
+}
+.hero-assurances {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px 22px;
+  margin-top: 24px;
+}
+.hero-assurance {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted-foreground);
+  font-size: 12px;
+  font-weight: 600;
+}
+.hero-assurance svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+  color: var(--primary);
 }
 .eyebrow {
   color: var(--primary);
@@ -388,11 +405,6 @@
   font-size: 22px;
   line-height: 1;
 }
-@media (min-width: 1600px) {
-  .hero-photo {
-    object-position: center 58%;
-  }
-}
 @media (max-width: 767px) {
   .site-container {
     width: calc(100% - 40px);
@@ -404,21 +416,25 @@
     font-size: 23px;
   }
   .hero {
-    min-height: 700px;
-    padding: 255px 0 36px;
-    align-items: end;
+    padding: 112px 0 48px;
+  }
+  .hero-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+  .hero-visual {
+    order: -1;
   }
   .hero-photo {
-    height: 420px;
-    object-position: 73% center;
+    width: min(100%, 460px);
+    max-height: 360px;
   }
-  .hero-shade {
-    background: linear-gradient(
-      0deg,
-      var(--background) 42%,
-      rgba(13, 15, 18, 0.40) 75%,
-      rgba(13, 15, 18, 0.20)
-    );
+  .hero-assurances {
+    gap: 12px 16px;
+    margin-top: 22px;
+  }
+  .hero-assurance {
+    font-size: 11px;
   }
   .hero h1 {
     font-size: clamp(40px, 10vw, 49px);
