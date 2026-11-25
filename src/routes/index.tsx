@@ -442,6 +442,25 @@ function Index() {
           </div>
         </div>
       </section>
+      <section className="section" id="simulador">
+        <div className="site-container">
+          <div className="eyebrow">Faça as contas</div>
+          <h2 className="section-title">
+            Quanto esse serviço poderia
+            <br />
+            <span className="text-primary">representar no seu mês?</span>
+          </h2>
+          <p className="section-copy mt-5 max-w-2xl">
+            Simule quantos faróis pretende atender por semana e o valor que cobraria por farol.
+          </p>
+          <Simulator />
+          <p className="mt-5 max-w-4xl text-xs leading-relaxed text-muted-foreground">
+            Simulação ilustrativa calculada com base em 4,33 semanas por mês. Não representa lucro
+            líquido, não desconta materiais, deslocamento, taxas ou outros custos e não garante
+            demanda ou resultados financeiros.
+          </p>
+        </div>
+      </section>
       <section className="section section-alt">
         <div className="site-container grid items-center gap-12 md:grid-cols-2">
           <div className="relative">
@@ -514,25 +533,6 @@ function Index() {
               loading="lazy"
             />
           </div>
-      </section>
-      <section className="section" id="simulador">
-        <div className="site-container">
-          <div className="eyebrow">Faça as contas</div>
-          <h2 className="section-title">
-            Quanto esse serviço poderia
-            <br />
-            <span className="text-primary">representar no seu mês?</span>
-          </h2>
-          <p className="section-copy mt-5 max-w-2xl">
-            Simule quantos faróis pretende atender por semana e o valor que cobraria por farol.
-          </p>
-          <Simulator />
-          <p className="mt-5 max-w-4xl text-xs leading-relaxed text-muted-foreground">
-            Simulação ilustrativa calculada com base em 4,33 semanas por mês. Não representa lucro
-            líquido, não desconta materiais, deslocamento, taxas ou outros custos e não garante
-            demanda ou resultados financeiros.
-          </p>
-        </div>
       </section>
       <section className="section section-alt">
         <div className="site-container grid gap-12 md:grid-cols-2">
